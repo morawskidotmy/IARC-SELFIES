@@ -80,26 +80,25 @@ jobs:
       if: steps.check-update.outputs.needs_update == 'true'
       run: python convert_smiles_to_selfies.py
     
+    - name: Move data to data folder
+      if: steps.check-update.outputs.needs_update == 'true'
+      run: |
+        mkdir -p data
+        mv selfies-data/* data/
+        rmdir selfies-data
+    
     - name: Update last processed commit
       if: steps.check-update.outputs.needs_update == 'true'
       run: |
         echo "${{ steps.smiles-commit.outputs.latest }}" > .last-processed-commit
-        echo "IARC-SMILES commit ${{ steps.smiles-commit.outputs.latest }}" > selfies-data/SOURCE_INFO.txt
-        echo "Converted on $(date -u +"%Y-%m-%d %H:%M:%S UTC")" >> selfies-data/SOURCE_INFO.txt
+        echo "IARC-SMILES commit ${{ steps.smiles-commit.outputs.latest }}" > data/SOURCE_INFO.txt
+        echo "Converted on $(date -u +"%Y-%m-%d %H:%M:%S UTC")" >> data/SOURCE_INFO.txt
     
     - name: Commit and push SELFIES data
       if: steps.check-update.outputs.needs_update == 'true'
       run: |
         git config user.name "github-actions[bot]"
         git config user.email "github-actions[bot]@users.noreply.github.com"
-        git add selfies-data/ .last-processed-commit
+        git add data/ .last-processed-commit
         git commit -m "Update SELFIES data from IARC-SMILES@${{ steps.smiles-commit.outputs.latest }}" || echo "No changes to commit"
         git push
-    
-    - name: Upload SELFIES data as artifact
-      if: steps.check-update.outputs.needs_update == 'true'
-      uses: actions/upload-artifact@v4
-      with:
-        name: selfies-data
-        path: selfies-data/
-        retention-days: 90

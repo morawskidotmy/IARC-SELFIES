@@ -7,7 +7,7 @@ Automated conversion of IARC-SMILES data to SELFIES format.
 This repository contains a CI/CD pipeline that automatically:
 1. Clones the `data` folder from [IARC-SMILES](https://github.com/morawskidotmy/IARC-SMILES)
 2. Converts all SMILES strings to SELFIES format
-3. Uploads the converted data as GitHub Actions artifacts
+3. Commits and pushes the converted data to the `data/` folder in this repository
 
 ## SELFIES Format
 
@@ -29,8 +29,7 @@ The workflow intelligently checks if IARC-SMILES has been updated and only runs 
 2. **Clone IARC-SMILES data**: Uses sparse checkout to efficiently clone only the data folder
 3. **Install dependencies**: Uses `uv` for fast Python package installation
 4. **Convert to SELFIES**: Processes all CSV/TSV/Excel files containing SMILES data
-5. **Commit results**: Pushes converted SELFIES data back to this repository
-6. **Upload artifacts**: Saves converted SELFIES data for 90 days
+5. **Commit and push**: Saves converted SELFIES data to the `data/` folder and pushes to the repository
 
 ## Local Usage
 
@@ -50,9 +49,13 @@ uv pip install selfies pandas
 
 # Run conversion
 python convert_smiles_to_selfies.py
+
+# Move to data folder
+mkdir -p data
+mv selfies-data/* data/
 ```
 
-The converted SELFIES data will be saved to `selfies-data/`.
+The converted SELFIES data will be saved to `data/`.
 
 ## Dependencies
 
