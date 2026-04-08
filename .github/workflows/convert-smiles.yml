@@ -84,8 +84,13 @@ jobs:
       if: steps.check-update.outputs.needs_update == 'true'
       run: |
         mkdir -p data
-        mv selfies-data/* data/
-        rmdir selfies-data
+        if [ -d selfies-data ]; then
+          mv selfies-data/* data/ 2>/dev/null || true
+          rmdir selfies-data 2>/dev/null || true
+        fi
+        if [ -d selfies-lists ]; then
+          mv selfies-lists data/ 2>/dev/null || true
+        fi
     
     - name: Update last processed commit
       if: steps.check-update.outputs.needs_update == 'true'
