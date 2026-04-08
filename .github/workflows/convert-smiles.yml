@@ -1,0 +1,103 @@
+name: Convert SMILES to SELFIES
+
+on:
+  schedule:
+    # Run monthly on the 1st at 2 AM UTC to check for updates
+    - cron: '0 2 1 * *'
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  convert:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout IARC-SELFIES repository
+      uses: actions/checkout@v4
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+    
+    - name: Get latest commit hash from IARC-SMILES
+      id: smiles-commit
+      run: |
+        LATEST_COMMIT=$(git ls-remote https://github.com/morawskidotmy/IARC-SMILES.git HEAD | cut -f1)
+        echo "latest=$LATEST_COMMIT" >> $GITHUB_OUTPUT
+        echo "Latest IARC-SMILES commit: $LATEST_COMMIT"
+        
+        # Check if we've already processed this commit
+        if [ -f .last-processed-commit ]; then
+          LAST_PROCESSED=$(cat .last-processed-commit)
+          echo "last=$LAST_PROCESSED" >> $GITHUB_OUTPUT
+          echo "Last processed commit: $LAST_PROCESSED"
+        else
+          echo "last=" >> $GITHUB_OUTPUT
+          echo "No previous commit found"
+        fi
+    
+    - name: Check if update needed
+      id: check-update
+      run: |
+        if [ "${{ steps.smiles-commit.outputs.latest }}" != "${{ steps.smiles-commit.outputs.last }}" ] || [ "${{ github.event_name }}" = "workflow_dispatch" ] || [ "${{ github.event_name }}" = "push" ]; then
+          echo "needs_update=true" >> $GITHUB_OUTPUT
+          echo "Update needed - proceeding with conversion"
+        else
+          echo "needs_update=false" >> $GITHUB_OUTPUT
+          echo "No update needed - IARC-SMILES unchanged"
+        fi
+    
+    - name: Clone IARC-SMILES data folder
+      if: steps.check-update.outputs.needs_update == 'true'
+      run: |
+        git clone --depth 1 --filter=blob:none --sparse https://github.com/morawskidotmy/IARC-SMILES.git temp-smiles
+        cd temp-smiles
+        git sparse-checkout set data
+        cd ..
+        mv temp-smiles/data ./smiles-data
+        rm -rf temp-smiles
+    
+    - name: Install uv
+      if: steps.check-update.outputs.needs_update == 'true'
+      uses: astral-sh/setup-uv@v5
+      with:
+        enable-cache: true
+    
+    - name: Set up Python
+      if: steps.check-update.outputs.needs_update == 'true'
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.11'
+    
+    - name: Install dependencies
+      if: steps.check-update.outputs.needs_update == 'true'
+      run: uv pip install --system selfies pandas openpyxl
+    
+    - name: Convert SMILES to SELFIES
+      if: steps.check-update.outputs.needs_update == 'true'
+      run: python convert_smiles_to_selfies.py
+    
+    - name: Update last processed commit
+      if: steps.check-update.outputs.needs_update == 'true'
+      run: |
+        echo "${{ steps.smiles-commit.outputs.latest }}" > .last-processed-commit
+        echo "IARC-SMILES commit ${{ steps.smiles-commit.outputs.latest }}" > selfies-data/SOURCE_INFO.txt
+        echo "Converted on $(date -u +"%Y-%m-%d %H:%M:%S UTC")" >> selfies-data/SOURCE_INFO.txt
+    
+    - name: Commit and push SELFIES data
+      if: steps.check-update.outputs.needs_update == 'true'
+      run: |
+        git config user.name "github-actions[bot]"
+        git config user.email "github-actions[bot]@users.noreply.github.com"
+        git add selfies-data/ .last-processed-commit
+        git commit -m "Update SELFIES data from IARC-SMILES@${{ steps.smiles-commit.outputs.latest }}" || echo "No changes to commit"
+        git push
+    
+    - name: Upload SELFIES data as artifact
+      if: steps.check-update.outputs.needs_update == 'true'
+      uses: actions/upload-artifact@v4
+      with:
+        name: selfies-data
+        path: selfies-data/
+        retention-days: 90
