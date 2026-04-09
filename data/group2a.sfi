@@ -1,0 +1,79 @@
+[C][C][Branch1][C][Cl][Branch1][C][Cl][Cl]	1,1,1-Trichloroethane
+[C][Branch1][#Branch1][C][Branch1][Ring1][C][Cl][Cl][Cl]	1,2,3-Trichloropropane
+[C][N][N][C]	1,2-Dimethylhydrazine
+[C][C][O][S][=Branch1][C][=O][=Branch1][C][=O][C][Ring1][#Branch1]	1,3-Propane sultone
+[C][C][C][C][Branch1][Branch1][C][C][Ring1][=Branch1][N][C][=Branch1][C][=O][N][Branch1][Ring2][C][C][Cl][N][=O]	1-(2-Chloroethyl)-3-cyclohexyl-1-nitrosourea (CCNU) (Lomustine)
+[C][=C][C][=C][C][=Branch1][Ring2][=C][Ring1][=Branch1][C][=C][C][=C][Branch1][#C][C][=C][C][=Branch1][=Branch1][=C][Ring1][=Branch1][Ring1][O][C][=C][Ring1][=C][N+1][=Branch1][C][=O][O-1]	1-Nitropyrene
+[C][C][Branch1][C][C][Br]	2-Bromopropane
+[C][=C][C][=C][C][=Branch1][Ring2][=C][Ring1][=Branch1][N][C][=Branch1][C][=S][S][Ring1][#Branch1]	2-Mercaptobenzothiazole
+[C][C][=C][C][=C][C][=C][Ring1][=Branch1][N+1][=Branch1][C][=O][O-1]	2-Nitrotoluene
+[C][=C][C][=Branch2][Ring1][#Branch2][=C][Branch2][Ring1][Branch1][C][=C][Ring1][=Branch1][N][=N][C][=C][C][=Branch1][=Branch2][=C][Branch1][Branch1][C][=C][Ring1][=Branch1][Cl][Cl][Cl][Cl]	3,3′,4,4′-Tetrachloroazobenzene
+[C][C][=C][Branch1][#Branch2][C][=C][C][=Branch1][Ring2][=C][Ring1][=Branch1][Cl][N]	4-Chloro-ortho-toluidine
+[C][O][C][=C][C][=C][C][=Branch1][C][=O][O][C][Ring1][#Branch1][=C][C][=C][Ring1][O][C][=C][O][Ring1][Branch1]	5-Methoxypsoralen
+[C][=C][C][=C][C][=Branch1][Ring2][=C][Ring1][=Branch1][C][=C][C][=C][Ring1][#Branch1][C][=C][Branch1][O][C][=C][C][=C][C][=C][Ring1][#Branch2][Ring1][=Branch1][N+1][=Branch1][C][=O][O-1]	6-Nitrochrysene
+[C][=C][C][=O]	Acrolein
+[C][=C][C][=Branch1][C][=O][N]	Acrylamide
+[C][C][C][Branch2][=Branch1][Branch1][C][Branch2][Branch1][S][C][C][Branch1][Ring2][O][Ring1][=Branch1][O][C][C][C][Branch2][Ring2][=Branch2][C][C][=C][Ring1][=Branch1][C][=Branch2][Ring1][#C][=C][C][=Branch1][Branch1][=C][Ring1][=Branch1][O][C][=Branch1][C][=O][C][=C][Branch1][Branch1][C][Ring1][=Branch2][=O][C][=Branch1][=Branch1][=C][C][=C][Ring1][Branch2][O][C][O][Branch1][#Branch1][C][=Branch1][C][=O][C][O][O][N][O]	Adriamycin (Doxorubicin)
+[C][C][C][=C][Branch1][O][C][=Branch1][=Branch1][=C][C][=C][Ring1][=Branch1][C][C][N][Branch1][Ring2][C][O][C][C][=Branch1][C][=O][C][Cl]	Alachlor
+[C][=C][C][=C][Branch1][Branch1][C][=C][Ring1][=Branch1][C][Branch1][C][Cl][Cl]	alpha-Chlorinated toluenes (benzal chloride, benzotrichloride, benzyl chloride) and benzoyl chloride (combined exposures)
+[C][=C][C][=C][Branch1][Branch1][C][=C][Ring1][=Branch1][N]	Aniline (see also Aniline hydrochloride)
+[C][=C][C][=C][Branch1][Branch1][C][=C][Ring1][=Branch1][N].[Cl]	Aniline hydrochloride (see also Aniline)
+[C][C][N][C][=N][C][=Branch1][=Branch2][=N][C][=Branch1][Ring2][=N][Ring1][=Branch1][Cl][N][C][Branch1][C][C][C]	Atrazine
+[C][=N][C][=Branch2][Ring1][#Branch2][=N][C][=Branch1][C][=O][N][Ring1][#Branch1][C][C][Branch1][=N][C][Branch1][=Branch2][C][Branch1][Ring2][O][Ring1][Branch1][C][O][O][O][N]	Azacitidine
+[C][Branch1][Ring1][C][Cl][N][C][=Branch1][C][=O][N][Branch1][Ring2][C][C][Cl][N][=O]	Bischloroethyl nitrosourea (BCNU) (Carmustine)
+[C][C][=C][C][C][C][Ring1][=Branch1][C][=Branch1][C][=O][N][Branch1][Branch1][C][Ring1][=Branch1][=O][S][C][Branch1][=Branch1][C][Branch1][C][Cl][Cl][Branch1][C][Cl][Cl]	Captafol
+[C][=Branch1][C][=O][C][Branch1][C][Cl][Branch1][C][Cl][Cl]	Chloral
+[C][Branch1][=Branch2][C][Branch1][C][Cl][Branch1][C][Cl][Cl][Branch1][C][O][O]	Chloral hydrate
+[C][=C][C][=Branch2][Ring1][=Branch2][=C][C][=C][Ring1][=Branch1][C][Branch1][S][C][Branch1][Ring1][C][O][N][C][=Branch1][C][=O][C][Branch1][C][Cl][Cl][O][N+1][=Branch1][C][=O][O-1]	Chloramphenicol
+[C][Branch1][Ring1][C][Cl][N][Branch2][Ring1][=Branch2][C][=Branch1][C][=O][N][C][Branch1][Ring1][C][=O][C][Branch1][O][C][Branch1][#Branch1][C][Branch1][Ring1][C][O][O][O][O][N][=O]	Chlorozotocin
+[N].[N].[Cl][Pt][Cl]	Cisplatin
+[Co]	Cobalt metal (without tungsten carbide or other metal alloys)
+[C][=C][C][=C][C][=Branch1][Ring2][=C][Ring1][=Branch1][C][=C][C][=C][C][=C][Ring1][Branch1][C][Ring1][#Branch2][=C][Branch1][Branch1][C][=C][Ring1][=C][C][=C][Ring1][Branch2]	Cyclopenta[cd]pyrene
+[C][=C][C][=Branch2][Ring1][N][=C][C][=C][Ring1][=Branch1][C][Branch1][N][C][=C][C][=C][Branch1][Branch1][C][=C][Ring1][=Branch1][Cl][C][Branch1][C][Cl][Branch1][C][Cl][Cl][Cl]	DDT (4,4'-dichlorodiphenyltrichloroethane)
+[C][C][O][P][=Branch1][C][=S][Branch1][Ring2][O][C][C][O][C][=N][C][=Branch1][=Branch2][=N][C][=Branch1][Ring2][=C][Ring1][=Branch1][C][C][Branch1][C][C][C]	Diazinon
+[C][=C][C][=C][C][=Branch1][Ring2][=C][Ring1][=Branch1][C][=C][C][=C][C][=C][Branch1][=N][C][=C][C][=C][C][=C][C][=C][Ring1][=Branch1][Ring1][#Branch2][C][=C][Ring1][=C][Ring2][Ring1][Ring1]	Dibenz[a,h]anthracene
+[C][=C][C][=C][C][=Branch1][Ring2][=C][Ring1][=Branch1][C][=C][C][=N][C][=C][Branch1][#Branch1][C][=C][Ring1][=Branch1][Ring1][O][C][=C][C][=C][C][=C][Ring1][=Branch1][C][=C][Ring1][N]	Dibenz[a,j]acridine
+[C][=C][C][=C][C][=Branch1][Ring2][=C][Ring1][=Branch1][C][=C][C][=C][C][=C][C][Ring1][=Branch1][=C][Ring1][O][C][=C][C][=C][C][=C][Ring1][=Branch1][C][Ring1][#Branch2][=C][C][=C][Ring1][=C]	Dibenzo[a,l]pyrene
+[C][Branch1][C][Cl][Cl]	Dichloromethane (Methylene chloride)
+[C][C][C][C][Branch1][O][C][Ring1][Branch1][C][C][Ring1][=Branch1][O][Ring1][Ring1][C][Branch2][Ring1][#Branch1][C][=Branch2][Ring1][C][=C][Branch1][=C][C][Ring1][#Branch2][Branch1][Branch2][C][Ring1][Branch1][Branch1][C][Cl][Cl][Cl][Cl][Cl][Cl]	Dieldrin, and aldrin metabolized to dieldrin
+[C][C][O][S][=Branch1][C][=O][=Branch1][C][=O][O][C][C]	Diethyl sulfate
+[C][O][S][=Branch1][C][=O][=Branch1][C][=O][O][C]	Dimethyl sulfate
+[C][N][Branch1][C][C][C][=Branch1][C][=O][Cl]	Dimethylcarbamoyl chloride
+[C][C][Branch1][Ring2][O][Ring1][Ring1][C][Cl]	Epichlorohydrin
+[C][C][O][C][=Branch1][C][=O][N]	Ethyl carbamate (Urethane)
+[C][Branch1][Ring1][C][Br][Br]	Ethylene dibromide
+[C][C][Branch1][Ring2][O][Ring1][Ring1][C][O]	Glycidol
+[C][C][=Branch1][C][=C][C][=Branch1][C][=O][O][C][C][C][O][Ring1][Ring1]	Glycidyl methacrylate
+[C][Branch1][=Branch1][C][=Branch1][C][=O][O][N][C][P][=Branch1][C][=O][Branch1][C][O][O]	Glyphosate
+[N][N]	Hydrazine
+[P][#In]	Indium phosphide
+[C][N][C][=C][Branch1][#C][C][=C][Branch1][Branch1][C][=C][Ring1][=Branch1][N][=C][C][=C][Ring1][Branch2][N][=C][Ring1][=N][N]	IQ (2-Amino-3-methylimidazo[4,5-f]quinoline)
+[C][C][O][C][=Branch1][C][=O][C][C][Branch1][Branch2][C][=Branch1][C][=O][O][C][C][S][P][=Branch1][C][=S][Branch1][Ring1][O][C][O][C]	Malathion
+[C][O][S][=Branch1][C][=O][=Branch1][C][=O][C]	Methyl methanesulfonate
+[C][O][C][=C][Branch1][N][C][=C][Branch1][Branch1][C][=C][Ring1][=Branch1][C][C][=C][O][C]	Methyleugenol
+[C][N][Branch1][C][C][C][=O]	N,N-Dimethylformamide
+[C][C][N][Branch1][=Branch1][C][=Branch1][C][=O][N][N][=O]	N-Ethyl-N-nitrosourea
+[C][N][Branch1][=Branch1][C][=Branch1][C][=O][N][N][=O]	N-Methyl-N-nitrosourea
+[C][N][Branch1][O][C][=Branch1][C][=N][N][N+1][=Branch1][C][=O][O-1][N][=O]	N-Methyl-N´-nitro-N-nitrosoguanidine (MNNG)
+[C][C][N][Branch1][Ring1][C][C][N][=O]	N-Nitrosodiethylamine
+[C][N][Branch1][C][C][N][=O]	N-Nitrosodimethylamine
+[C][N][Branch1][Ring2][C][C][Cl][C][C][Cl]	Nitrogen mustard
+[C][O][C][=C][C][=C][C][=C][Ring1][=Branch1][N]	ortho-Anisidine (see also ortho-Anisidine hydrochloride)
+[C][O][C][=C][C][=C][C][=C][Ring1][=Branch1][N].[Cl]	ortho-Anisidine hydrochloride (see also ortho-Anisidine)
+[C][O][C][=C][C][=C][C][=C][Ring1][=Branch1][N+1][=Branch1][C][=O][O-1]	ortho-Nitroanisole
+[C][C][C][=C][N][=C][Branch1][Branch1][C][=C][Ring1][=Branch1][C][C][O][C][=C][C][=C][Branch1][Branch1][C][=C][Ring1][=Branch1][C][C][C][=Branch1][C][=O][N][C][=Branch1][C][=O][S][Ring1][#Branch1]	Pioglitazone
+[C][=C][C][=Branch2][Ring1][#C][=C][Branch2][Ring1][#Branch2][C][=Branch2][Ring1][Branch1][=C][Ring1][=Branch1][C][=C][C][=Branch1][N][=C][Branch1][Branch2][C][=Branch1][Ring2][=C][Ring1][=Branch1][Br][Br][Br][Br][Br][Br]	Polybrominated biphenyls
+[C][C][Branch1][C][C][N][C][=Branch1][C][=O][C][=C][C][=C][Branch1][Branch1][C][=C][Ring1][=Branch1][C][N][N][C].[Cl]	Procarbazine hydrochloride
+[C-1][#Si+1]	Silicon carbide whiskers
+[C][=C][C][=C][C][=C][C][=C][Ring1][=Branch1]	Styrene
+[C][C][Branch1][Ring2][O][Ring1][Ring1][C][=C][C][=C][C][=C][Ring1][=Branch1]	Styrene-7,8-oxide
+[OH1-1].[OH1-1].[O-1][Si][O][Si][Branch2][Ring1][Branch2][O][Si][Branch1][Ring2][O][Ring1][=Branch1][Branch1][=C][O][Si][Branch1][Ring2][O][Ring1][=Branch2][Branch1][Ring2][O][Ring1][Branch2][O-1][O-1][O-1].[Mg+2].[Mg+2].[Mg+2]	Talc
+[C][O][C][=C][C][=Branch1][O][=C][C][=Branch1][Branch1][=C][Ring1][=Branch1][O][O][C][C][C][C][Branch1][#Branch1][C][O][C][Ring1][Branch1][=O][C][Branch2][Ring1][C][C][=C][C][=C][Branch1][#Branch1][C][=C][Ring1][=C][Ring1][=Branch1][O][C][O][Ring1][#Branch1][O][C][C][Branch2][Ring1][N][C][Branch2][Ring1][#Branch1][C][C][Branch1][Ring2][O][Ring1][=Branch1][C][O][C][Branch1][Ring2][O][Ring1][#Branch1][C][=C][C][=C][S][Ring1][Branch1][O][O]	Teniposide
+[C][C][Branch1][C][C][Branch2][Ring1][C][C][=C][C][=Branch1][N][=C][Branch1][Branch2][C][=Branch1][Ring2][=C][Ring1][=Branch1][Br][O][Br][C][=C][C][=Branch1][N][=C][Branch1][Branch2][C][=Branch1][Ring2][=C][Ring1][=Branch1][Br][O][Br]	Tetrabromobisphenol A
+[C][=Branch1][=Branch1][=C][Branch1][C][Cl][Cl][Branch1][C][Cl][Cl]	Tetrachloroethylene (Perchloroethylene)
+[C][=Branch1][=Branch1][=C][Branch1][C][F][F][Branch1][C][F][F]	Tetrafluoroethylene
+[C][Branch1][#Branch1][C][Branch1][Ring1][C][Br][Br][O][P][=Branch1][C][=O][Branch1][=Branch2][O][C][C][Branch1][Ring1][C][Br][Br][O][C][C][Branch1][Ring1][C][Br][Br]	Tris(2,3-dibromopropyl) phosphate
+[C][C][Branch1][Ring1][C][Cl][O][P][=Branch1][C][=O][Branch1][Branch2][O][C][Branch1][C][C][C][Cl][O][C][Branch1][C][C][C][Cl]	Tris(chloropropyl) phosphate (TCPP)
+[Sb+3]	Trivalent antimony
+[C][=C][Br]	Vinyl bromide
+[C][=C][F]	Vinyl fluoride
