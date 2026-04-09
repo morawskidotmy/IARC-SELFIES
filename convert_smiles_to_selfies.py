@@ -3,9 +3,9 @@
 Convert SMILES data from IARC-SMILES repository to SELFIES format.
 """
 
-import os
 import sys
 from pathlib import Path
+import argparse
 import selfies as sf
 import pandas as pd
 
@@ -97,14 +97,49 @@ def process_file(input_path: Path, output_path: Path, selfies_list_path: Path):
     print(f"  Saved SELFIES list to {selfies_list_path}")
 
 
+def resolve_input_dir(configured_input: str | None) -> Path:
+    """Resolve input directory from CLI or sensible defaults."""
+    if configured_input:
+        return Path(configured_input)
+    if Path("smiles-data").exists():
+        return Path("smiles-data")
+    if Path("data").exists():
+        return Path("data")
+    return Path("smiles-data")
+
+
 def main():
     """Main conversion process."""
-    smiles_data_dir = Path("smiles-data")
-    selfies_data_dir = Path("selfies-data")
-    selfies_lists_dir = Path("selfies-sfi")
+    parser = argparse.ArgumentParser(
+        description="Convert SMILES data files to SELFIES format."
+    )
+    parser.add_argument(
+        "--input-dir",
+        default=None,
+        help="Input directory containing SMILES data files (default: smiles-data, or data if smiles-data is missing).",
+    )
+    parser.add_argument(
+        "--output-dir",
+        default="selfies-data",
+        help="Output directory for converted tabular files (default: selfies-data).",
+    )
+    parser.add_argument(
+        "--sfi-dir",
+        default="selfies-sfi",
+        help="Output directory for .sfi files (default: selfies-sfi).",
+    )
+    args = parser.parse_args()
+
+    smiles_data_dir = resolve_input_dir(args.input_dir)
+    selfies_data_dir = Path(args.output_dir)
+    selfies_lists_dir = Path(args.sfi_dir)
     
     if not smiles_data_dir.exists():
         print(f"Error: {smiles_data_dir} directory not found!", file=sys.stderr)
+        print(
+            "Hint: provide --input-dir, or create ./smiles-data or ./data with source files.",
+            file=sys.stderr,
+        )
         sys.exit(1)
     
     # Create output directories

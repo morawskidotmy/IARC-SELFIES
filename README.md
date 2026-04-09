@@ -36,23 +36,11 @@ The workflow intelligently checks if IARC-SMILES has been updated and only runs 
 To run the conversion locally:
 
 ```bash
-# Clone the IARC-SMILES data
-git clone --depth 1 --filter=blob:none --sparse https://github.com/morawskidotmy/IARC-SMILES.git temp-smiles
-cd temp-smiles
-git sparse-checkout set data
-cd ..
-mv temp-smiles/data ./smiles-data
-rm -rf temp-smiles
+# One-shot wrapper: clone, convert, cleanup temp files, exit
+bash ./run_conversion.sh
 
-# Install dependencies with uv
-uv pip install selfies pandas
-
-# Run conversion
-python convert_smiles_to_selfies.py
-
-# Move to data folder
-mkdir -p data
-mv selfies-data/* data/
+# Optional: run converter directly with custom paths
+python convert_smiles_to_selfies.py --input-dir ./smiles-data --output-dir ./data --sfi-dir ./data
 ```
 
 The converted SELFIES data will be saved to `data/`.

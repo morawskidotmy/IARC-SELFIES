@@ -12,8 +12,9 @@ venv/
 smiles-data/
 temp-smiles/
 
-# Keep converted SELFIES data in repo
-# selfies-data/
+# Legacy conversion folders (do not keep in repo)
+selfies-data/
+selfies-sfi/
 
 # IDE
 .vscode/

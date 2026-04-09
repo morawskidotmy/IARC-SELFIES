@@ -50,47 +50,15 @@ jobs:
           echo "No update needed - IARC-SMILES unchanged"
         fi
     
-    - name: Clone IARC-SMILES data folder
-      if: steps.check-update.outputs.needs_update == 'true'
-      run: |
-        git clone --depth 1 --filter=blob:none --sparse https://github.com/morawskidotmy/IARC-SMILES.git temp-smiles
-        cd temp-smiles
-        git sparse-checkout set data
-        cd ..
-        mv temp-smiles/data ./smiles-data
-        rm -rf temp-smiles
-    
-    - name: Install uv
-      if: steps.check-update.outputs.needs_update == 'true'
-      uses: astral-sh/setup-uv@v5
-      with:
-        enable-cache: true
-    
     - name: Set up Python
       if: steps.check-update.outputs.needs_update == 'true'
       uses: actions/setup-python@v5
       with:
         python-version: '3.11'
     
-    - name: Install dependencies
+    - name: Run conversion script
       if: steps.check-update.outputs.needs_update == 'true'
-      run: uv pip install --system selfies pandas openpyxl
-    
-    - name: Convert SMILES to SELFIES
-      if: steps.check-update.outputs.needs_update == 'true'
-      run: python convert_smiles_to_selfies.py
-    
-    - name: Move data to data folder
-      if: steps.check-update.outputs.needs_update == 'true'
-      run: |
-        mkdir -p data
-        if [ -d selfies-data ]; then
-          mv selfies-data/* data/ 2>/dev/null || true
-          rmdir selfies-data 2>/dev/null || true
-        fi
-        if [ -d selfies-lists ]; then
-          mv selfies-lists data/ 2>/dev/null || true
-        fi
+      run: bash ./run_conversion.sh
     
     - name: Update last processed commit
       if: steps.check-update.outputs.needs_update == 'true'
@@ -102,6 +70,8 @@ jobs:
     - name: Commit and push SELFIES data
       if: steps.check-update.outputs.needs_update == 'true'
       run: |
+        rm -rf selfies-data selfies-sfi
+        git rm -r --ignore-unmatch selfies-data selfies-sfi
         git config user.name "github-actions[bot]"
         git config user.email "github-actions[bot]@users.noreply.github.com"
         git add data/ .last-processed-commit
