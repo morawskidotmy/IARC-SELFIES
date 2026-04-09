@@ -79,15 +79,19 @@ def process_file(input_path: Path, output_path: Path, selfies_list_path: Path):
     elif output_path.suffix == '.xlsx':
         df.to_excel(output_path, index=False)
     
-    # Save SELFIES list (one per line, excluding empty ones)
+    # Save SELFIES list in .sfi format (SELFIES\tName per line, excluding empty ones)
     selfies_list_path.parent.mkdir(parents=True, exist_ok=True)
-    selfies_list = df['SELFIES'][df['SELFIES'] != ""].tolist()
+    valid = df[df['SELFIES'] != ""]
+    has_name = 'Name' in valid.columns
     with open(selfies_list_path, 'w') as f:
-        for selfies in selfies_list:
-            f.write(f"{selfies}\n")
+        for _, row in valid.iterrows():
+            if has_name and pd.notna(row['Name']) and str(row['Name']).strip():
+                f.write(f"{row['SELFIES']}\t{row['Name']}\n")
+            else:
+                f.write(f"{row['SELFIES']}\n")
     
     # Count successful conversions
-    successful = len(selfies_list)
+    successful = len(valid)
     total = len(df)
     print(f"  Converted {successful}/{total} SMILES to SELFIES")
     print(f"  Saved SELFIES list to {selfies_list_path}")
@@ -97,7 +101,7 @@ def main():
     """Main conversion process."""
     smiles_data_dir = Path("smiles-data")
     selfies_data_dir = Path("selfies-data")
-    selfies_lists_dir = Path("selfies-lists")
+    selfies_lists_dir = Path("selfies-sfi")
     
     if not smiles_data_dir.exists():
         print(f"Error: {smiles_data_dir} directory not found!", file=sys.stderr)
@@ -123,8 +127,8 @@ def main():
         relative_path = input_file.relative_to(smiles_data_dir)
         output_file = selfies_data_dir / relative_path
         
-        # Create SELFIES list filename (change extension to .txt)
-        selfies_list_file = selfies_lists_dir / relative_path.with_suffix('.txt')
+        # Create SELFIES list filename (change extension to .sfi)
+        selfies_list_file = selfies_lists_dir / relative_path.with_suffix('.sfi')
         
         try:
             process_file(input_file, output_file, selfies_list_file)
@@ -134,7 +138,7 @@ def main():
     
     print(f"\nConversion complete!")
     print(f"  Full data with SELFIES saved to: {selfies_data_dir}/")
-    print(f"  SELFIES lists saved to: {selfies_lists_dir}/")
+    print(f"  SELFIES .sfi files saved to: {selfies_lists_dir}/")
 
 
 if __name__ == "__main__":

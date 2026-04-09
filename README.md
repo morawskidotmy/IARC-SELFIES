@@ -9,9 +9,9 @@ This repository contains a CI/CD pipeline that automatically:
 2. Converts all SMILES strings to SELFIES format
 3. Commits and pushes the converted data to the `data/` folder in this repository
 
-## SELFIES Format
+## File Format
 
-SELFIES (Self-Referencing Embedded Strings) is a robust molecular string representation that guarantees 100% validity of generated molecules, unlike SMILES which can produce invalid structures.
+Output SELFIES data uses the [`.sfi` file format](https://github.com/morawskidotmy/.sfi) — the SELFIES equivalent of `.smi`.
 
 ## CI/CD Pipeline
 
