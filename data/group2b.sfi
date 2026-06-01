@@ -102,6 +102,7 @@
 [C][=C][C][=Branch1][S][=C][Branch1][N][C][=C][Ring1][=Branch1][C][=C][C][=Branch1][C][=O][O][O][O]	Caffeic acid
 [C][=C][C][=C][C][=Branch1][Ring2][=C][Ring1][=Branch1][C][=C][C][=C][C][=C][Ring1][=Branch1][N][Ring1][#Branch2]	Carbazole
 [C]	Carbon black
+[CH0]	Carbon nanotubes, multiwalled MWCNT-7
 [C][Branch1][C][Cl][Branch1][C][Cl][Branch1][C][Cl][Cl]	Carbon tetrachloride
 [C][=C][C][=C][Branch1][Branch2][C][=Branch1][Ring2][=C][Ring1][=Branch1][O][O]	Catechol
 [C][C][C][Branch1][=Branch2][C][Branch1][Branch1][C][Ring1][Branch1][Cl][Cl][C][Branch2][Ring1][#Branch1][C][=Branch2][Ring1][C][=C][Branch1][=C][C][Ring1][#Branch2][Branch1][Branch2][C][Ring1][Branch1][Branch1][C][Cl][Cl][Cl][Cl][Cl][Cl]	Chlordane

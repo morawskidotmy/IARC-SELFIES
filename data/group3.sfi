@@ -129,6 +129,7 @@
 [C][C][=C][C][C][C][Ring1][=Branch1][C][=Branch1][C][=O][N][Branch1][Branch1][C][Ring1][=Branch1][=O][S][C][Branch1][C][Cl][Branch1][C][Cl][Cl]	Captan
 [C][N][C][=Branch1][C][=O][O][C][=C][C][=C][C][=C][C][=C][C][=C][Ring1][=Branch1][Ring1][#Branch2]	Carbaryl
 [C]	Carbon nanotubes, multiwalled, other than MWCNT-7
+[CH0]	Carbon nanotubes, single-walled
 [C][=C][C][=C][C][=Branch1][Ring2][=C][Ring1][=Branch1][C][=Branch1][=C][=C][C][=C][Ring1][#Branch1][S][=Branch1][C][=O][=Branch1][C][=O][O-1][N][=N][C][=C][Branch2][Ring1][#Branch1][C][=C][C][=C][C][=C][Ring1][=Branch1][C][=Branch1][Ring2][=C][Ring1][#Branch2][S][=Branch1][C][=O][=Branch1][C][=O][O-1][O].[Na+1].[Na+1]	Carmoisine
 [C][C][C][=Branch1][C][=O][C][=C][Branch2][Ring2][Ring1][C][=Branch1][=Branch2][=C][Branch1][Branch1][C][=C][Ring1][=Branch1][F][C][C][C][Ring1][Ring1][N][C][=Branch1][C][=O][N][C][=N][C][=C][Branch1][Branch1][C][=C][Ring1][=Branch1][C][#N][O].[C][C][=Branch1][C][=O][O-1].[C][C][=Branch1][C][=O][O-1].[Zn+2]	Carrageenan, native
 [N][Cl]	Chloramine
@@ -200,6 +201,7 @@
 [C][=C][C][=C][C][=Branch1][Ring2][=C][Ring1][=Branch1][C][=Branch1][C][=O][O][C][Ring1][#Branch1][C][=C][C][=Branch2][Ring2][C][=C][Branch2][Ring1][=N][C][=Branch2][Ring1][Branch2][=C][Ring1][=Branch1][O][C][=C][Branch1][#C][C][=Branch1][O][=C][Branch1][#Branch1][C][=C][Ring1][=C][Ring1][=Branch1][Br][O][Br][Br][O][Br]	Eosin
 [C][C][=N][N][=C][N][Ring1][Branch1][C][=C][Branch1][#Branch2][C][=C][Branch1][Branch1][C][=C][Ring1][=Branch1][Cl][C][=Branch1][Ring2][=N][Ring1][#C][C][=C][C][=C][C][=C][Ring1][=Branch1]	Estazolam
 [C][C][C][=N][C][=C][C][=Branch1][Ring2][=C][Ring1][=Branch1][C][=Branch1][C][=S][N]	Ethionamide
+[C][C][N][Branch1][Ring1][C][C][C][=Branch1][C][=S][S-1].[C][C][N][Branch1][Ring1][C][C][C][=Branch1][C][=S][S-1].[C][C][N][Branch1][Ring1][C][C][C][=Branch1][C][=S][S-1].[C][C][N][Branch1][Ring1][C][C][C][=Branch1][C][=S][S-1].[Se+4]	Ethyl selenac
 [C][C][N][Branch1][Ring1][C][C][C][=Branch1][C][=S][S][Te][Branch1][=N][S][C][=Branch1][C][=S][N][Branch1][Ring1][C][C][C][C][Branch1][=N][S][C][=Branch1][C][=S][N][Branch1][Ring1][C][C][C][C][S][C][=Branch1][C][=S][N][Branch1][Ring1][C][C][C][C]	Ethyl tellurac
 [C][=C]	Ethylene
 [C][C][S][Ring1][Ring1]	Ethylene sulfide
