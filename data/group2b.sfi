@@ -96,6 +96,7 @@
 [C][C][=C][Branch2][Ring1][=C][N][=C][Branch1][=Branch1][N][=C][Ring1][=Branch1][N][C][Branch1][#Branch1][C][C][=Branch1][C][=O][N][N][C][C][Branch1][=Branch1][C][=Branch1][C][=O][N][N][C][=Branch1][C][=O][N][C][Branch2][Branch1][N][C][Branch1][Branch2][C][=C][N][=C][N][Ring1][Branch1][O][C][C][Branch1][P][C][Branch1][=N][C][Branch1][=Branch2][C][Branch1][Ring2][O][Ring1][=Branch1][C][O][O][O][O][C][C][Branch2][Ring1][=Branch1][C][Branch1][=N][C][Branch1][=Branch2][C][Branch1][Ring2][O][Ring1][=Branch1][C][O][O][O][C][=Branch1][C][=O][N][O][C][=Branch1][C][=O][N][C][Branch1][C][C][C][Branch2][Branch1][Branch2][C][Branch1][C][C][C][=Branch1][C][=O][N][C][Branch1][=Branch1][C][Branch1][C][C][O][C][=Branch1][C][=O][N][C][C][C][=N][C][=Branch1][Branch1][=C][S][Ring1][Branch1][C][=N][C][=Branch1][Branch1][=C][S][Ring1][Branch1][C][=Branch1][C][=O][N][C][C][C][S+1][Branch1][C][C][C][O]	Bleomycins
 [C][Branch1][=Branch1][C][=Branch1][C][=O][O][Branch1][C][Cl][Br]	Bromochloroacetic acid
 [C][Branch1][C][Cl][Branch1][C][Cl][Br]	Bromodichloromethane
+[C][C][C][C][O][C][=Branch1][C][=O][C][=C][C][=C][C][=C][Ring1][=Branch1][C][=Branch1][C][=O][O][C][C][=C][C][=C][C][=C][Ring1][=Branch1]	Butyl benzyl phthalate
 [C][C][C][C][O][C][=Branch1][C][=O][C][=Branch1][C][=C][C]	Butyl methacrylate
 [C][C][Branch1][C][C][Branch1][C][C][C][=C][Branch1][O][C][=C][C][=Branch1][Ring2][=C][Ring1][=Branch1][O][C][O]	Butylated hydroxyanisole (BHA)
 [C][C][C][C][=O]	Butyraldehyde
@@ -133,12 +134,14 @@
 [C][=C][C][=C][C][=C][C][=Branch1][Branch2][=C][C][Ring1][=Branch1][=C][Ring1][#Branch2][C][=C][C][=C][C][=C][C][=C][C][=C][Ring1][=Branch1][C][=Branch1][=Branch1][=C][Ring1][#Branch2][Ring1][P][C][=C][Ring2][Ring1][Ring2]	Dibenzo[a,i]pyrene
 [C][Branch1][=Branch1][C][=Branch1][C][=O][O][Branch1][C][Br][Br]	Dibromoacetic acid
 [C][#Branch1][C][#N][C][Branch1][C][Br][Br]	Dibromoacetonitrile
+[C][C][C][C][O][C][=Branch1][C][=O][C][=C][C][=C][C][=C][Ring1][=Branch1][C][=Branch1][C][=O][O][C][C][C][C]	Dibutyl phthalate
 [C][Branch1][=Branch1][C][=Branch1][C][=O][O][Branch1][C][Cl][Cl]	Dichloroacetic acid
 [C][O][P][=Branch1][C][=O][Branch1][Ring1][O][C][O][C][=C][Branch1][C][Cl][Cl]	Dichlorvos
 [C][Branch1][Ring1][C][O][N][C][C][O]	Diethanolamine
 [C][C][Branch1][Ring2][O][Ring1][Ring1][C][O][C][=C][C][=Branch1][=Branch1][=C][C][=C][Ring1][=Branch1][O][C][C][C][O][Ring1][Ring1]	Diglycidyl resorcinol ether
 [C][C][C][Branch2][Branch2][C][C][Branch2][#Branch1][=N][C][C][Branch1][Ring2][O][Ring1][=Branch1][O][C][C][Branch2][=Branch1][#C][O][C][Branch1][=Branch1][C][C][Ring1][=Branch1][O][O][C][C][Branch2][Branch1][#C][O][C][Branch1][=Branch1][C][C][Ring1][=Branch1][O][O][C][C][C][C][Branch2][Ring2][=N][C][Branch1][Ring2][C][Ring1][=Branch1][C][C][C][C][Ring1][#Branch1][C][C][Branch2][Ring1][O][C][Branch2][Ring1][=Branch1][C][Ring1][=Branch1][Branch1][S][C][C][C][Ring1][Branch1][C][=C][C][=Branch1][C][=O][O][C][Ring1][=Branch1][O][C][O][C][C][C][O][O]	Digoxin
 [C][C][C][C][=C][C][=C][Branch1][Branch1][C][=C][Ring1][=Branch1][O][C][O][Ring1][#Branch1]	Dihydrosafrole
+[C][C][Branch1][C][C][C][C][C][C][C][C][O][C][=Branch1][C][=O][C][=C][C][=C][C][=C][Ring1][=Branch1][C][=Branch1][C][=O][O][C][C][C][C][C][C][C][Branch1][C][C][C]	Diisononyl phthalate
 [C][C][Branch1][C][C][O][S][=Branch1][C][=O][=Branch1][C][=O][O][C][Branch1][C][C][C]	Diisopropyl sulfate
 [C][O][P][=Branch1][C][=O][O][C]	Dimethyl hydrogen phosphite
 [C][As][=Branch1][C][=O][Branch1][C][C][O]	Dimethylarsinic acid
